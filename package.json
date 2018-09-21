@@ -1,0 +1,75 @@
+{
+  "name": "vscode-ci-status",
+  "displayName": "CI Build Status",
+  "description": "Shows the CI build status of the project your working on.",
+  "homepage": "https://github.com/ovhemert/vscode-ci-status#readme",
+  "version": "1.0.0",
+  "keywords": [
+    "ci", "build", "status"
+  ],
+  "publisher": "ovhemert",
+  "author": "Osmond van Hemert <osmond@vanhemert.nu>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ovhemert/vscode-ci-status.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ovhemert/vscode-ci-status/issues"
+  },
+  "engines": {
+      "vscode": "^1.27.0"
+  },
+  "categories": [
+      "Other"
+  ],
+  "activationEvents": [
+      "*"
+  ],
+  "main": "./extension",
+  "contributes": {
+      "configuration": {
+          "type": "object",
+          "title": "CI Build Status configuration",
+          "properties": {
+              "ci-status.service": {
+                  "type": [
+                      "string",
+                      "null"
+                  ],
+                  "default": null,
+                  "description": "Specifies the service to be checked (appveyor, circleci, travis)"
+              },
+              "ci-status.owner": {
+                  "type": [
+                      "string",
+                      "null"
+                  ],
+                  "default": null,
+                  "description": "Specifies the account owner/user on the ci service"
+              },
+              "ci-status.repo": {
+                  "type": [
+                      "string",
+                      "null"
+                  ],
+                  "default": null,
+                  "description": "Specifies the repository/project name on the ci service"
+              }
+          }
+      }
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^8.10.25",
+    "standard": "^12.0.1",
+    "vscode": "^1.1.21"
+  },
+  "dependencies": {
+    "ci-status": "^1.1.0"
+  }
+}
