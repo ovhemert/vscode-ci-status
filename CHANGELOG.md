@@ -8,7 +8,7 @@ All notable changes to the "vscode-ci-status" extension will be documented in th
 
 - Jenkins service support
 - Travis CI private repos support
-
+- Breaking changes in config params
 
 ## [1.0.x] - 2018-09-21
 
