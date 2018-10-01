@@ -4,7 +4,7 @@
     "description": "Shows the CI build status of the project your working on.",
     "icon": "assets/images/icon-256x256.png",
     "homepage": "https://github.com/ovhemert/vscode-ci-status#readme",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "keywords": [
         "ci",
         "build",
