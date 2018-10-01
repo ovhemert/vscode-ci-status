@@ -40,24 +40,95 @@
                         "string",
                         "null"
                     ],
+                    "enum": [
+                        "",
+                        "appveyor",
+                        "circleci",
+                        "jenkins",
+                        "travis"
+                    ],
                     "default": null,
-                    "description": "Specifies the service to be checked (appveyor, circleci, travis)"
+                    "description": "Specifies the service to be checked"
                 },
-                "ci-status.owner": {
+                "ci-status.appveyor.owner": {
                     "type": [
                         "string",
                         "null"
                     ],
                     "default": null,
-                    "description": "Specifies the account owner/user on the ci service"
+                    "description": "User account the repositories belong to"
                 },
-                "ci-status.repo": {
+                "ci-status.appveyor.repo": {
                     "type": [
                         "string",
                         "null"
                     ],
                     "default": null,
-                    "description": "Specifies the repository/project name on the ci service"
+                    "description": "The name of the repository your interested in"
+                },
+                "ci-status.jenkins.project": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "default": null,
+                    "description": "The name of the project your interested in"
+                },
+                "ci-status.jenkins.url": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "default": null,
+                    "description": "The host url to connect to"
+                },
+                "ci-status.jenkins.token": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "default": null,
+                    "description": "API token (preferred) / password of the user for authentication"
+                },
+                "ci-status.jenkins.user": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "default": null,
+                    "description": "User account name to connect with"
+                },
+                "ci-status.travis.branch": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "default": null,
+                    "description": "Show build status for specific branch"
+                },
+                "ci-status.travis.owner": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "default": null,
+                    "description": "User account the repositories belong to"
+                },
+                "ci-status.travis.repo": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "default": null,
+                    "description": "The name of the repository your interested in"
+                },
+                "ci-status.travis.token": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "default": null,
+                    "description": "API token (preferred) / password of the user for authentication"
                 }
             }
         }
@@ -73,6 +144,6 @@
         "vscode": "^1.1.21"
     },
     "dependencies": {
-        "ci-status": "^1.1.0"
+        "ci-status": "^1.2.1"
     }
 }

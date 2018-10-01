@@ -14,12 +14,14 @@ class StatusCheck {
       if (!self._status) { self._statusBarItem.hide() }
       // check config
       const cfg = vscode.workspace.getConfiguration('ci-status')
-      const { service, owner, repo } = cfg
-      if (!service || !owner) { return }
+      const { service } = cfg
+      if (!service) { return }
       const svc = cistatus[service]
       if (!svc) { return }
+      const serviceOptions = cfg[service]
       // get status
-      const projects = await svc.getProjects({ service, owner, repo })
+      const options = { service, ...serviceOptions }
+      const projects = await svc.getProjects(options)
       const status = (projects && projects.length > 0) ? projects[0] : null
       if (!status) { return }
       // compare with previous status
