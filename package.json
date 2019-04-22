@@ -45,7 +45,8 @@
                         "appveyor",
                         "circleci",
                         "jenkins",
-                        "travis"
+                        "travis",
+                        "codepipeline"
                     ],
                     "default": null,
                     "description": "Specifies the service to be checked"
@@ -129,6 +130,22 @@
                     ],
                     "default": null,
                     "description": "API token (preferred) / password of the user for authentication"
+                },
+                "ci-status.codepipeline.name": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "default": null,
+                    "description": "The name of the pipeline you're interested in"
+                },
+                "ci-status.codepipeline.region": {
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "default": null,
+                    "description": "The AWS region in which your pipeline resides"
                 }
             }
         }
