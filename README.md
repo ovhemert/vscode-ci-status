@@ -33,6 +33,16 @@ Supported settings differ per service. You first have to specify which service t
 "ci-status.appveyor.repo": "ci-status"
 ```
 
+### AWS Codepipeline
+
+```js
+"ci-status.service": "codepipeline"
+// The name of the pipeline you're interested in (required)
+"ci-status.codepipeline.name": "test-project-pipeline",
+// The AWS region in which your pipeline resides (required)
+"ci-status.codepipeline.region": "us-east-1"
+```
+
 ### Jenkins
 
 ```js
@@ -59,14 +69,4 @@ Supported settings differ per service. You first have to specify which service t
 "ci-status.travis.repo": "ci-status"
 // API token (preferred) / password of the user for authentication (optional)
 "ci-status.travis.token": "116237544ebea73f9a27ffebadb3961859"
-```
-
-### AWS Codepipeline
-
-```js
-"ci-status.service": "codepipeline"
-// The name of the pipeline you're interested in (required)
-"ci-status.codepipeline.name": "test-project-pipeline",
-// The AWS region in which your pipeline resides (required)
-"ci-status.codepipeline.region": "us-east-1"
 ```
